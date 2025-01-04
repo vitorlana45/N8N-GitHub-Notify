@@ -2,14 +2,14 @@ const { Client } = require('pg');
 const express = require('express');
 
 const app = express();
-app.use(express.json()); 
+app.use(express.json());
 
 const client = new Client({
-  user: 'myuser',        
-  host: 'localhost',    
-  database: 'mydatabase', 
-  password: 'mypassword',  
-  port: 5432,            
+  user: 'myuser',
+  host: 'localhost',
+  database: 'mydatabase',
+  password: 'mypassword',
+  port: 5432,
 });
 
 client.connect()

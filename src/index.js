@@ -40,7 +40,10 @@ app.post('/commit', (req, res) => {
     data.developed_by
   ])
     .then(() => {
-      res.status(200).send('Dados inseridos com sucesso');
+      res.status(200).send({
+        data: 'Dados inseridos com sucesso',
+        instant: new Date().toISOString()
+      });
     })
     .catch(err => {
       console.error('Erro ao inserir dados:', err.stack);

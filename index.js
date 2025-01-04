@@ -1,3 +1,3 @@
-function testeN8n() {
+function testN8n() {
   console.log('testeN8n');
 }

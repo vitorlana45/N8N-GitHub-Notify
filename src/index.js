@@ -24,13 +24,14 @@ app.post('/commit', (req, res) => {
   const data = req.body;
 
   const query = `
-    INSERT INTO commit_details (committer_username, committer_email, modified_files, real_ip, event_type, pushed_at, commit_id, developed_by)
-    VALUES ($1, $2, $3, $4, $5, $6, $7, $8);
+    INSERT INTO commit_details (committer_username, committer_email, commit_message, modified_files, real_ip, event_type, pushed_at, commit_id, developed_by)
+    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9);
   `;
 
   client.query(query, [
     data.committer_username,
     data.committer_email,
+    data.commit_message,
     JSON.stringify(data.modified_files),
     data.real_ip,
     data.event_type,

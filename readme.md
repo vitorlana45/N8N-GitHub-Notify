@@ -3,7 +3,7 @@
 ## Visão Geral
 Sistema implementado no N8N que monitora commits em um repositório GitHub através de webhook. Ao detectar um novo commit, o sistema armazena os dados em um backend via HTTP e envia uma notificação por email usando SMTP do Gmail.
 
-![alt text](readme-images/template-email.png)
+![alt text](readme-images/n8n.png)
 
 ## Implementação Atual
 
